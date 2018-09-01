@@ -6,7 +6,7 @@
 console.log("Bienvenue dans ce jeu de devinette !");
 
 // Cette ligne génère aléatoirement un nombre entre 1 et 100
-var solution = Math.floor(Math.random() * 100) + 1;
+var solution = Math.floor(Math.random() * 1000) + 1;
 
 // Décommentez temporairement cette ligne pour mieux vérifier le programme
 //console.log("(La solution est " + solution + ")");
@@ -17,13 +17,13 @@ var solution = Math.floor(Math.random() * 100) + 1;
 
     /* Option du jeu; choisir le nombre d'essais.Boucle while, compteur.*/
 
-var compteur = Number(prompt("Bienvenue dans ce petit jeu. Le nombre mystérieux est compris entre 1 et 100, vous aurez besoin, certainemant, de plusieurs essais. Saisisez le nombre de tentatives souhaitées pour trouver la bonne réponse. "));
+var compteur = Number(prompt("Bienvenue dans ce petit jeu. Le nombre mystérieux est compris entre 1 et 1000, vous aurez besoin, certainemant, de plusieurs essais. Saisisez le nombre de tentatives souhaitées pour trouver la bonne réponse. "));
 
 while  (isNaN(compteur)||(compteur < 0)||(compteur>12)) { // Vérification si les caractères sont correctes. 
 	
    alert("Ce nombre n'est pas valide. Attention !");
 
-   var compteur = Number(prompt(" Saisisez le nombre de tentatives souhaitées pour trouver la bonne réponse. ( 12 Essais est le maximum possible. )"));	
+   var compteur = Number(prompt(" Saisisez le nombre de tentatives souhaitées pour trouver la bonne réponse. ( Le maximum possible est 12 essais. )"));	
 }
   
     /* Initialisation des variables de la boucle while, Saisi et Essai.*/
@@ -32,19 +32,19 @@ while  (isNaN(compteur)||(compteur < 0)||(compteur>12)) { // Vérification si le
     maxEssai  = compteur - 1,       // nombre d'éssais maximum
 decompteEssai = compteur;           // décompteur de Number(prompt(.    
 
-console.log("Entrer un nombre entre 1 et 100. Au-delà de  "+compteur+"  essais infructueux, la partie est perdue. Saisir ( 0 ) pour intérompre la partie.        Bonne chance ! ");
+console.log("Entrer un nombre entre 1 et 1000. Au-delà de  "+compteur+"  essais infructueux, la partie est perdue. Saisir ( 0 ) pour intérompre la partie.        Bonne chance ! ");
 
-var Saisi =Number(prompt("Entrer un nombre entre 1 et 100. Au-delà de  "+compteur+"  essais infructueux, la partie est perdue.                  Saisir ( 0 ) pour intérompre la partie.   Bonne chance !  "));	
+var Saisi =Number(prompt("Entrer un nombre entre 1 et 1000. Au-delà de  "+compteur+"  essais infructueux, la partie est perdue.                  Saisir ( 0 ) pour intérompre la partie.   Bonne chance !  "));	
 	
 while ((Saisi !== solution) && (Essai < maxEssai)) { // Tant que la solution n'est pas trouvée et essai(s) inférieur ou égal à maxEssai.
 	  		
     Essai++; // Incrémenter le compteur d'essai ( même en cas d'erreur ).
 	decompteEssai--;//déincrémenter le compteur de Number(prompt(.
 	
-    if ((Saisi < 0) || (Saisi > 100) || isNaN(Saisi)) { // Vérification si la Saisi est correcte. (Intervalle 1 à 100 et autres caractères ).
+    if ((Saisi < 0) || (Saisi > 1000) || isNaN(Saisi)) { // Vérification si la Saisi est correcte. (Intervalle 1 à 100 et autres caractères ).
 		
         
-        console.log("Erreur ! Vous devez saisir un nombre entre 1 et 100. Essai n° "+Essai+".");
+        console.log("Erreur ! Vous devez saisir un nombre entre 1 et 1000. Essai n° "+Essai+".");
 		
 		var Saisi =Number(prompt("Erreur ! Il vous reste "+decompteEssai+" essai(s)." ));
 		
