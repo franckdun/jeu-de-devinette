@@ -1,7 +1,7 @@
 body{
   /*  font-family: "Century Gothic", Verdana, sans-serif;*/
     font-family: 'Open Sans', sans-serif;  
- 	background-image: url(retina_wood.png);
+ 	background-image: url(NM1.png);
 }
 h1,h2{
     text-align: center;
@@ -11,9 +11,12 @@ h1,h2{
 }
 .p1{
 	text-align: center;
+	color: #999999;
 }
-
-h1 {
+.p2{
+	color: #999999;
+}	
+h1,h2 {
 	color: #F929F5;
 	font-weight: bold;
 }
